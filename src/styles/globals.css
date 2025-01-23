@@ -31,19 +31,46 @@
     @apply font-pretendard text-[11px] font-normal leading-[165%] tracking-[0%];
   }
   .font-body3_r_14 {
-    @apply font-suit text-[14px] font-normal leading-[170%] tracking-[-0.01em];
+    @apply font-suit text-[14px] font-normal leading-[170%] tracking-[-0.14px];
   }
   .font-body4_r_12 {
-    @apply font-suit text-[12px] font-normal leading-[170%] tracking-[-0.01em];
+    @apply font-suit text-[12px] font-normal leading-[170%] tracking-[-0.12px];
+  }
+  .font-body5_m_14 {
+    @apply font-suit text-[14px] font-medium leading-[170%] tracking-[-0.14px];
   }
   .font-title1_m_15 {
-    @apply font-pretendard text-[15px] font-medium leading-[150%] tracking-[-0.03em];
+    @apply font-pretendard text-[15px] font-medium leading-[150%] tracking-[-0.45px];
   }
   .font-title2_b_14 {
-    @apply font-suit text-[14px] font-bold leading-[140%] tracking-[-0.02em];
+    @apply font-suit text-[14px] font-bold leading-[140%] tracking-[-0.28px];
   }
   .font-title3_b_18 {
-    @apply font-suit text-[18px] font-bold leading-[150%] tracking-[-0.02em];
+    @apply font-suit text-[18px] font-bold leading-[150%] tracking-[-0.36px];
+  }
+  .font-title4_sb_15 {
+    @apply font-pretendard text-[15px] font-semibold leading-[150%] tracking-[-0.45px];
+  }
+  .font-head1_b_28 {
+    @apply font-suit text-[28px] font-bold leading-[150%] tracking-[-0.56px];
+  }
+  .font-caption1_b_13 {
+    @apply font-suit text-[13px] font-bold leading-[140%] tracking-[-0.26px];
+  }
+  .font-caption2_r_13 {
+    @apply font-suit text-[13px] font-normal leading-[140%] tracking-[-0.13px];
+  }
+  .font-dm_b_13 {
+    font-family: var(--font-dm-sans), sans-serif;
+    @apply text-[13px] font-bold leading-[140%] tracking-[-0.02em];
+  }
+
+  .font-dm_variable {
+    font-family: var(--font-dm-sans), sans-serif;
+    font-variation-settings:
+      "opsz" 21,
+      "wght" 375;
+    @apply text-[13px] leading-[140%] tracking-[-0.02em];
   }
 }
 
@@ -70,6 +97,10 @@ body {
   scroll-behavior: smooth;
 
   overflow-x: auto;
+}
+
+p {
+  word-break: keep-all;
 }
 
 a {
