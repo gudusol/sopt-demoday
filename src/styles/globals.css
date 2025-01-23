@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "SUIT";
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/SUIT-Regular.woff2") format("woff2");
+  }
+
+  html {
+    font-size: 62.5%;
+    font-family: "Pretendard", sans-serif;
+  }
+}
+
+@layer components {
+  .font-body1_b_11 {
+    @apply font-pretendard text-[11px] font-bold leading-[145%] tracking-[0%];
+  }
+  .font-body2_r_11 {
+    @apply font-pretendard text-[11px] font-normal leading-[165%] tracking-[0%];
+  }
+  .font-body3_r_14 {
+    @apply font-suit text-[14px] font-normal leading-[170%] tracking-[-0.14px];
+  }
+  .font-body4_r_12 {
+    @apply font-suit text-[12px] font-normal leading-[170%] tracking-[-0.12px];
+  }
+  .font-body5_m_14 {
+    @apply font-suit text-[14px] font-medium leading-[170%] tracking-[-0.14px];
+  }
+  .font-title1_m_15 {
+    @apply font-pretendard text-[15px] font-medium leading-[150%] tracking-[-0.45px];
+  }
+  .font-title2_b_14 {
+    @apply font-suit text-[14px] font-bold leading-[140%] tracking-[-0.28px];
+  }
+  .font-title3_b_18 {
+    @apply font-suit text-[18px] font-bold leading-[150%] tracking-[-0.36px];
+  }
+  .font-title4_sb_15 {
+    @apply font-pretendard text-[15px] font-semibold leading-[150%] tracking-[-0.45px];
+  }
+  .font-head1_b_28 {
+    @apply font-suit text-[28px] font-bold leading-[150%] tracking-[-0.56px];
+  }
+  .font-caption1_b_13 {
+    @apply font-suit text-[13px] font-bold leading-[140%] tracking-[-0.26px];
+  }
+  .font-caption2_r_13 {
+    @apply font-suit text-[13px] font-normal leading-[140%] tracking-[-0.13px];
+  }
+  .font-dm_b_13 {
+    font-family: var(--font-dm-sans), sans-serif;
+    @apply text-[13px] font-bold leading-[140%] tracking-[-0.02em];
+  }
+
+  .font-dm_variable {
+    font-family: var(--font-dm-sans), sans-serif;
+    font-variation-settings:
+      "opsz" 21,
+      "wght" 375;
+    @apply text-[13px] leading-[140%] tracking-[-0.02em];
+  }
+}
+
+:root {
+  --min-width: 375px;
+  --max-width: 430px;
+  font-size: 62.5%;
+  background-color: #000000;
+}
+
+html {
+  font-size: 62.5%;
+  overscroll-behavior: none;
+}
+
+body {
+  width: 100%;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  min-height: 150dvh;
+  margin: 0 auto;
+
+  font-family: var(--font-pretendard), Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+
+  overflow-x: auto;
+}
+
+p {
+  word-break: keep-all;
+}
+
+a {
+  text-decoration: none;
+}
+
+select {
+  background: #fff;
+}
+
+.suit {
+  font-family: var(--font-suit), sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
