@@ -5,9 +5,13 @@ import Link from "next/link";
 
 interface HeaderProps {
   selectedMenu: "about" | "product";
+  isSmallLogo?: boolean;
 }
 
-export default function Header({ selectedMenu }: HeaderProps) {
+export default function Header({
+  selectedMenu,
+  isSmallLogo = false,
+}: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,12 +30,12 @@ export default function Header({ selectedMenu }: HeaderProps) {
 
   return (
     <header className="fixed top-0 w-full max-w-[43rem] bg-black transition-all">
-      <div className="relative z-20 flex items-start justify-between bg-black p-[2rem]">
+      <div className="relative z-20 flex items-start justify-between bg-black px-[2rem] pb-[1.6rem] pt-[1.9rem]">
         <Image
           src={"/images/logo.svg"}
           alt="logo-image"
-          width={isScrolled ? 105 : 225}
-          height={isScrolled ? 41 : 88}
+          width={isSmallLogo ? 105 : isScrolled ? 105 : 225}
+          height={isSmallLogo ? 41 : isScrolled ? 41 : 88}
           className="object-contain transition-all"
         />
         <button onClick={toggleMenu}>
