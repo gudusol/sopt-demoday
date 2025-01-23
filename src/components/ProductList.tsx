@@ -11,9 +11,9 @@ const ProductList = ({ products }: ProductListProps) => {
       {products.map((product) => {
         return (
           <ListCard
-            key={product.name}
+            key={product.ProductName}
             imageUrl={product.imageUrl}
-            name={product.name}
+            name={product.ProductName}
             category={product.category}
             description={product.description}
           />
