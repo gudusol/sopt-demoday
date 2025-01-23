@@ -21,20 +21,6 @@ export default {
         pretendard: ["Pretendard", "sans-serif"],
         suit: ["SUIT", "sans-serif"],
       },
-      fontSize: {
-        body1_b_11: ["11px", { lineHeight: "145%", letterSpacing: "0%" }],
-        body2_r_11: ["11px", { lineHeight: "165%", letterSpacing: "0%" }],
-        body3_r_14: ["14px", { lineHeight: "170%", letterSpacing: "-0.01em" }],
-        body4_r_12: ["12px", { lineHeight: "170%", letterSpacing: "-0.01em" }],
-        title1_m_15: ["15px", { lineHeight: "150%", letterSpacing: "-0.03em" }],
-        title2_b_14: ["14px", { lineHeight: "140%", letterSpacing: "-0.02em" }],
-        title3_b_18: ["18px", { lineHeight: "150%", letterSpacing: "-0.02em" }],
-      },
-      fontWeight: {
-        regular: "400",
-        medium: "500",
-        bold: "700",
-      },
     },
   },
   future: {

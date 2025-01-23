@@ -2,6 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "SUIT";
+    font-style: normal;
+    font-display: swap;
+    src: url("/fonts/SUIT-Regular.woff2") format("woff2");
+  }
+
+  html {
+    font-size: 62.5%;
+    font-family: "Pretendard", sans-serif;
+  }
+}
+
+@layer components {
+  .font-body1_b_11 {
+    @apply font-pretendard text-[11px] font-bold leading-[145%] tracking-[0%];
+  }
+  .font-body2_r_11 {
+    @apply font-pretendard text-[11px] font-normal leading-[165%] tracking-[0%];
+  }
+  .font-body3_r_14 {
+    @apply font-suit text-[14px] font-normal leading-[170%] tracking-[-0.01em];
+  }
+  .font-body4_r_12 {
+    @apply font-suit text-[12px] font-normal leading-[170%] tracking-[-0.01em];
+  }
+  .font-title1_m_15 {
+    @apply font-pretendard text-[15px] font-medium leading-[150%] tracking-[-0.03em];
+  }
+  .font-title2_b_14 {
+    @apply font-suit text-[14px] font-bold leading-[140%] tracking-[-0.02em];
+  }
+  .font-title3_b_18 {
+    @apply font-suit text-[18px] font-bold leading-[150%] tracking-[-0.02em];
+  }
+}
+
 :root {
   --min-width: 375px;
   --max-width: 430px;
@@ -11,6 +56,7 @@
 
 html {
   font-size: 62.5%;
+  overscroll-behavior: none;
 }
 
 body {
