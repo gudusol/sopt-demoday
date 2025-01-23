@@ -157,7 +157,7 @@ export default function Home() {
             후원사 및 협력사
           </h3>
           <Image
-            src="/images/main_logos.svg"
+            src="/images/main_logos.png"
             alt="logos-image"
             width={308}
             height={60}
