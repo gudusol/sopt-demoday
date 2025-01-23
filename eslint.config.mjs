@@ -17,9 +17,6 @@ const eslintConfig = [
     plugins: {
       tailwindcss: eslintPluginTailwindcss,
     },
-    rules: {
-      "tailwindcss/classnames-order": "error",
-    },
   },
 ];
 
