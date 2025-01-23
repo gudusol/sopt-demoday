@@ -5,20 +5,25 @@
 :root {
   --min-width: 375px;
   --max-width: 430px;
+  font-size: 62.5%;
+  background-color: #000000;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   width: 100%;
   min-width: var(--min-width);
   max-width: var(--max-width);
-  min-height: 100dvh;
+  min-height: 150dvh;
   margin: 0 auto;
 
   font-family: var(--font-pretendard), Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 
-  /* border-left: 1px solid rgba(0, 0, 0, 0.1);
-  border-right: 1px solid rgba(0, 0, 0, 0.1); */
+  overflow-x: auto;
 }
 
 a {
