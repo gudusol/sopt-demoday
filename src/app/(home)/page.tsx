@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header selectedMenu="about" />
       <main className="w-full pt-[13rem]">
         <section className="w-full border-b border-dotted border-w50 px-[2rem] pb-[5rem]">
           <Image
@@ -33,7 +33,7 @@ export default function Home() {
                 alt="cta_arrow"
                 width={17}
                 height={17}
-              ></Image>
+              />
               <span className="font-title3_b_18 mx-[1.6rem]">
                 데모데이 서비스 보러가기
               </span>
@@ -42,7 +42,7 @@ export default function Home() {
                 alt="cta_arrow"
                 width={17}
                 height={17}
-              ></Image>
+              />
             </LinkButton>
           </div>
         </section>
@@ -98,7 +98,7 @@ export default function Home() {
                 alt="cta_arrow"
                 width={17}
                 height={17}
-              ></Image>
+              />
               <span className="font-title3_b_18 mx-[1.6rem]">
                 데모데이 서비스 보러가기
               </span>
@@ -107,7 +107,7 @@ export default function Home() {
                 alt="cta_arrow"
                 width={17}
                 height={17}
-              ></Image>
+              />
             </LinkButton>
           </div>
         </section>
