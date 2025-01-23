@@ -31,13 +31,15 @@ export default function Header({
   return (
     <header className="fixed top-0 w-full max-w-[43rem] bg-black transition-all">
       <div className="relative z-20 flex items-start justify-between bg-black px-[2rem] pb-[1.6rem] pt-[1.9rem]">
-        <Image
-          src={"/images/logo.svg"}
-          alt="logo-image"
-          width={isSmallLogo ? 105 : isScrolled ? 105 : 225}
-          height={isSmallLogo ? 41 : isScrolled ? 41 : 88}
-          className="object-contain transition-all"
-        />
+        <Link href={"/"}>
+          <Image
+            src={"/images/logo.svg"}
+            alt="logo-image"
+            width={isSmallLogo ? 105 : isScrolled ? 105 : 225}
+            height={isSmallLogo ? 41 : isScrolled ? 41 : 88}
+            className="object-contain transition-all"
+          />
+        </Link>
         <button onClick={toggleMenu}>
           <Image
             src={isOpen ? "/icons/ic_close.svg" : "/icons/hamburger.svg"}
