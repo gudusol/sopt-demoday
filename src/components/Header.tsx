@@ -15,7 +15,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed left-0 top-0 z-10 flex w-full max-w-[43rem] items-start justify-between bg-black p-[2rem] transition-all">
+    <header className="fixed top-0 z-10 flex w-full max-w-[43rem] items-start justify-between bg-black p-[2rem] transition-all">
       <Image
         src={"/images/logo.svg"}
         alt="logo-image"
