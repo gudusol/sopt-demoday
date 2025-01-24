@@ -15,6 +15,7 @@ const List = () => {
   useEffect(() => {
     setShuffledAppjamList(shuffleArray(listData.appjam));
   }, []);
+
   return (
     <>
       <Header selectedMenu="product" isSmallLogo={true} />

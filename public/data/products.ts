@@ -19,7 +19,7 @@ export interface ProductType {
 export const products = {
   confeti: {
     image1: "/images/sample.png",
-    logoImage: "/images/logo/confeti_logo.svg",
+    logoImage: "/data/logo/confeti.svg",
     productName: "confeti",
     type: "web",
     category: "라이프스타일",
@@ -37,7 +37,7 @@ export const products = {
   },
   daruda: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/daruda.svg",
     productName: "daruda",
     type: "web",
     category: "생산성",
@@ -54,7 +54,7 @@ export const products = {
   },
   cocos: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/cocos.svg",
     productName: "코코스",
     type: "web",
     category: "라이프스타일",
@@ -71,7 +71,7 @@ export const products = {
   },
   whipee: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/whipee.svg",
     productName: "휘피",
     type: "web",
     category: "라이프스타일",
@@ -88,7 +88,7 @@ export const products = {
   },
   jeolloga: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/jeolloga.svg",
     productName: "절로가",
     type: "web",
     category: "라이프스타일",
@@ -105,7 +105,7 @@ export const products = {
   },
   dash: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/dash.svg",
     productName: "Dash",
     type: "web",
     category: "라이프스타일",
@@ -122,7 +122,7 @@ export const products = {
   },
   gongbaek: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/gongbaek.svg",
     productName: "공백",
     type: "mobile",
     category: "소셜 네트워킹",
@@ -139,7 +139,7 @@ export const products = {
   },
   roomie: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/roomie.svg",
     productName: "Roomie",
     type: "mobile",
     category: "라이프스타일",
@@ -156,7 +156,7 @@ export const products = {
   },
   acon: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/acon.svg",
     productName: "acon",
     type: "mobile",
     category: "라이프스타일",
@@ -173,7 +173,7 @@ export const products = {
   },
   bbangjeom: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/bbangjeom.svg",
     productName: "제 과제 빵점",
     type: "mobile",
     category: "생산성",
@@ -190,7 +190,7 @@ export const products = {
   },
   spoony: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/spoony.svg",
     productName: "Spoony",
     type: "mobile",
     category: "라이프스타일",
@@ -207,7 +207,7 @@ export const products = {
   },
   memento: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/memento.svg",
     productName: "Memento",
     type: "mobile",
     category: "생산성",
@@ -224,7 +224,7 @@ export const products = {
   },
   suhyun: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/suhyun.svg",
     productName: "수현이랑",
     type: "mobile",
     category: "소셜 네트워킹",
@@ -241,7 +241,7 @@ export const products = {
   },
   napzak: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/napzak.svg",
     productName: "납작마켓",
     type: "mobile",
     category: "쇼핑",
@@ -258,7 +258,7 @@ export const products = {
   },
   shellin: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/shellin.svg",
     productName: "Shellin",
     type: "web",
     category: "생산성",
@@ -275,7 +275,7 @@ export const products = {
   },
   makers: {
     image1: "",
-    logoImage: "",
+    logoImage: "/data/logo/makers.svg",
     productName: "SOPT makers",
     type: "web",
     category: "라이프스타일",
