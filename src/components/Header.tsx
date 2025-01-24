@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 interface HeaderProps {
   selectedMenu: "about" | "product";
@@ -14,6 +15,8 @@ export default function Header({
 }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,24 +31,35 @@ export default function Header({
     setIsOpen((prev) => !prev);
   };
 
+  const handleLogoClick = (event: React.MouseEvent<HTMLImageElement>) => {
+    if (pathname === "/") {
+      window.scrollTo(0, 0);
+      window.location.reload();
+    } else {
+      event.preventDefault();
+      router.push("/");
+    }
+  };
+
   return (
-    <header className="fixed top-0 w-full max-w-[43rem] bg-black transition-all">
+    <header className="fixed top-0 z-30 w-full max-w-[43rem] bg-black transition-all">
       <div className="relative z-20 flex items-start justify-between bg-black px-[2rem] pb-[1.6rem] pt-[1.9rem]">
-        <Link href={"/"}>
-          <Image
-            src={"/images/logo.svg"}
-            alt="logo-image"
-            width={isSmallLogo ? 105 : isScrolled ? 105 : 225}
-            height={isSmallLogo ? 41 : isScrolled ? 41 : 88}
-            className="object-contain transition-all"
-          />
-        </Link>
+        <Image
+          src={"/images/logo.svg"}
+          alt="logo-image"
+          width={isSmallLogo ? 105 : isScrolled ? 105 : 225}
+          height={isSmallLogo ? 41 : isScrolled ? 41 : 88}
+          className="cursor-pointer object-contain transition-all"
+          priority
+          onClick={handleLogoClick}
+        />
         <button onClick={toggleMenu}>
           <Image
             src={isOpen ? "/icons/ic_close.svg" : "/icons/hamburger.svg"}
             alt="menu-icon"
             width={30}
             height={23}
+            style={{ width: "30px", height: "23px" }}
           />
         </button>
       </div>
@@ -56,7 +70,7 @@ export default function Header({
       >
         <ul className="border-b border-w100">
           <li
-            className={`border-w20 font-title3_b_18 border-b border-dotted bg-black py-[1.6rem] pl-[2rem] ${
+            className={`font-title3_b_18 border-b border-dotted border-w20 bg-black py-[1.6rem] pl-[2rem] ${
               selectedMenu === "about" ? "text-blue" : "text-w95"
             }`}
           >
@@ -67,7 +81,7 @@ export default function Header({
           </li>
 
           <li
-            className={`border-w20 font-title3_b_18 border-b border-dotted bg-black py-[1.6rem] pl-[2rem] ${
+            className={`font-title3_b_18 border-b border-dotted border-w20 bg-black py-[1.6rem] pl-[2rem] ${
               selectedMenu === "product" ? "text-blue" : "text-w95"
             }`}
           >
@@ -79,7 +93,7 @@ export default function Header({
 
           <li className="font-title3_b_18 bg-black py-[1.6rem] pl-[2rem] text-w95">
             <a
-              className="flex gap-[1.3rem]"
+              className="flex items-center gap-[1.3rem]"
               href="https://www.sopt.org"
               target="_blank"
             >
@@ -89,6 +103,7 @@ export default function Header({
                 alt="cta_arrow"
                 width={15}
                 height={15}
+                style={{ width: "15px", height: "15px" }}
               />
             </a>
           </li>

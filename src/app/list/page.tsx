@@ -1,12 +1,20 @@
 "use client";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ProductList from "@/components/ProductList";
 import { listData } from "../../../public/data/listData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const shuffleArray = <T,>(array: T[]): T[] => {
+  return [...array].sort(() => Math.random() - 0.5);
+};
 
 const List = () => {
   const [menu, setMenu] = useState<"appjam" | "sopt-term" | "makers">("appjam");
+  const [shuffledAppjamList, setShuffledAppjamList] = useState(listData.appjam);
+
+  useEffect(() => {
+    setShuffledAppjamList(shuffleArray(listData.appjam));
+  }, []);
 
   return (
     <>
@@ -15,7 +23,7 @@ const List = () => {
         <nav className="w-full">
           <ul className="flex gap-[0.9rem]">
             <li
-              className={`font-title4_sb_15 flex h-[3.3rem] flex-[2] items-center justify-center border ${
+              className={`font-title4_sb_15 flex h-[3.3rem] flex-[2] cursor-pointer items-center justify-center border ${
                 menu === "appjam"
                   ? "bg-w100 font-bold text-black"
                   : "bg-black text-w100"
@@ -25,7 +33,7 @@ const List = () => {
               앱잼
             </li>
             <li
-              className={`font-title4_sb_15 flex h-[3.3rem] flex-[1] items-center justify-center border ${
+              className={`font-title4_sb_15 flex h-[3.3rem] flex-[1] cursor-pointer items-center justify-center border ${
                 menu === "sopt-term"
                   ? "bg-w100 font-bold text-black"
                   : "bg-black text-w100"
@@ -35,7 +43,7 @@ const List = () => {
               솝텀
             </li>
             <li
-              className={`font-title4_sb_15 flex h-[3.3rem] flex-[1] items-center justify-center border ${
+              className={`font-title4_sb_15 flex h-[3.3rem] flex-[1] cursor-pointer items-center justify-center border ${
                 menu === "makers"
                   ? "bg-w100 font-bold text-black"
                   : "bg-black text-w100"
@@ -48,14 +56,13 @@ const List = () => {
         </nav>
 
         <section className="mb-[6rem] mt-[2.3rem]">
-          {menu === "appjam" && <ProductList products={listData.appjam} />}
+          {menu === "appjam" && <ProductList products={shuffledAppjamList} />}
           {menu === "sopt-term" && (
             <ProductList products={listData["sopt-term"]} />
           )}
           {menu === "makers" && <ProductList products={listData.makers} />}
         </section>
       </main>
-      <Footer />
     </>
   );
 };
