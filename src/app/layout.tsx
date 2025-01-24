@@ -13,14 +13,17 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "SOPT 데모데이",
+  title: {
+    template: "%s : SOPT 데모데이",
+    default: "SOPT 데모데이",
+  },
   description: "35기 AND SOPT 데모데이",
   openGraph: {
     title: "Connecting Dots.",
     description: "Connecting Dots. : 35기 SOPT 데모데이",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "https://github.com/user-attachments/assets/7c7453ed-f5b6-4e40-b97d-536070f5346a",
         width: 1200,
         height: 630,
         alt: "SOPT Demoday OG Image",
