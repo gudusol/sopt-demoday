@@ -1,5 +1,4 @@
 "use client";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LinkButton from "@/components/LinkButton";
 import Image from "next/image";
@@ -164,7 +163,6 @@ export default function Home() {
           />
         </section>
       </main>
-      <Footer />
     </>
   );
 }

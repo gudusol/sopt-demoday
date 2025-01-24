@@ -1,5 +1,4 @@
 "use client";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ProductList from "@/components/ProductList";
 import { listData } from "../../../public/data/listData";
@@ -55,7 +54,6 @@ const List = () => {
           {menu === "makers" && <ProductList products={listData.makers} />}
         </section>
       </main>
-      <Footer />
     </>
   );
 };

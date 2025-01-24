@@ -5,7 +5,6 @@ import { useParams, useRouter } from "next/navigation";
 import { products } from "../../../../public/data/products";
 import { useEffect } from "react";
 import LinkButton from "@/components/LinkButton";
-import Footer from "@/components/Footer";
 
 const Detail = () => {
   const router = useRouter();
@@ -47,7 +46,7 @@ const Detail = () => {
           height={221}
           style={{ width: "100%", height: "auto" }}
         />
-        <section className="border-w20 mt-[2rem] flex items-center gap-[1.7rem] border-b border-dotted pb-[1.5rem]">
+        <section className="mt-[2rem] flex items-center gap-[1.7rem] border-b border-dotted border-w20 pb-[1.5rem]">
           <Image src={logoImage} alt={logoImage} width={66} height={66} />
           <div>
             <h1 className="font-head1_b_28 text-w100">{productName}</h1>
@@ -75,7 +74,7 @@ const Detail = () => {
                     {developerKey === "web" && `🌐 웹 개발자`}
                     {developerKey === "server" && `💻 서버 개발자`}
                   </h4>
-                  <ul className="font-caption2_r_13 text-w80 flex items-center gap-[0.6rem]">
+                  <ul className="font-caption2_r_13 flex items-center gap-[0.6rem] text-w80">
                     {developers[developerKey].map((developer, index) => (
                       <li key={index} className="">
                         {developer}
@@ -114,7 +113,6 @@ const Detail = () => {
           </LinkButton>
         </div>
       </main>
-      <Footer />
     </>
   );
 };
