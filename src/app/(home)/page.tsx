@@ -109,7 +109,7 @@ export default function Home() {
               src="/images/main_photo.png"
               alt="main_photo"
               width={335}
-              height={361}
+              height={301}
               style={{ width: "100%", height: "auto" }}
             />
           </section>

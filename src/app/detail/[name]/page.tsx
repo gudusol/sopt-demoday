@@ -50,14 +50,26 @@ const Detail = () => {
           style={{ width: "100%", height: "auto" }}
         />
         <section className="mt-[2rem] flex items-center gap-[1.7rem] border-b border-dotted border-w20 pb-[1.5rem]">
-          <Image src={logoImage} alt={logoImage} width={66} height={66} />
+          <Image
+            src={logoImage}
+            alt={logoImage}
+            width={66}
+            height={66}
+            style={{ width: "66px", height: "66px" }}
+          />
           <div>
             <h1 className="font-head1_b_28 text-w100">{productName}</h1>
             <div className="flex gap-[0.8rem]">
               <p className="font-body3_r_14 text-w50">
                 {type === "mobile" ? "앱" : "웹"} 서비스
               </p>
-              <Image src="/icons/dot.svg" alt="dot" width={3} height={3} />
+              <Image
+                src="/icons/dot.svg"
+                alt="dot"
+                width={3}
+                height={3}
+                style={{ width: "3px", height: "3px" }}
+              />
               <p className="font-body5_m_14 text-w90">{category}</p>
             </div>
           </div>
@@ -103,6 +115,7 @@ const Detail = () => {
               alt="cta_arrow"
               width={17}
               height={17}
+              style={{ width: "17px", height: "17px" }}
             />
             <span className="font-title3_b_18 mx-[1.6rem]">
               데모데이 서비스 보러가기
@@ -112,6 +125,7 @@ const Detail = () => {
               alt="cta_arrow"
               width={17}
               height={17}
+              style={{ width: "17px", height: "17px" }}
             />
           </LinkButton>
         </div>
