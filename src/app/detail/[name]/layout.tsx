@@ -1,18 +1,17 @@
 import { Metadata } from "next";
 
-interface DetailProps {
-  params: { name: string };
-}
+type Props = {
+  params: Promise<{ name: string }>;
+};
 
-export async function generateMetadata({
-  params,
-}: DetailProps): Promise<Metadata> {
-  const { name } = await params;
-  const decodedName = decodeURIComponent(name);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const name = (await params).name;
+
   return {
-    title: `${decodedName} : SOPT 데모데이`,
+    title: name,
   };
 }
+
 export default function DetailLayout({
   children,
 }: {
