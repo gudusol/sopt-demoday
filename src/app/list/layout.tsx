@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "서비스 소개 : SOPT 데모데이",
+  title: "서비스 소개",
 };
 
 export default function ListLayout({
