@@ -10,7 +10,7 @@ interface ListCardProps {
 
 const ListCard = ({ imageUrl, name, category, description }: ListCardProps) => {
   return (
-    <Link href={`/detail/${encodeURIComponent(name)}`}>
+    <Link href={`/detail/${encodeURIComponent(name.replaceAll(" ", "_"))}`}>
       <article>
         <Image
           src={imageUrl}

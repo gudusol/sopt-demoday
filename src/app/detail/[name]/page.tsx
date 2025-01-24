@@ -5,23 +5,26 @@ import { useParams, useRouter } from "next/navigation";
 import { products } from "../../../../public/data/products";
 import { useEffect } from "react";
 import LinkButton from "@/components/LinkButton";
+import { pahtToProductKey } from "@/constants/productName";
 
 const Detail = () => {
   const router = useRouter();
-  const { name } = useParams(); // URL에서 name 가져오기
-  const decodedName = decodeURIComponent(name as string); // 한글 URL 디코딩
+  const { name } = useParams();
+  const decodedName = decodeURIComponent(name as string);
+  const productKey =
+    pahtToProductKey[decodedName as keyof typeof pahtToProductKey];
+
+  const product = products[productKey as keyof typeof products];
 
   useEffect(() => {
-    if (!(decodedName in products)) {
-      router.replace("/"); // 없는 제품이면 "/"로 이동
+    if (!(productKey in products)) {
+      router.replace("/");
     }
-  }, [decodedName, router]);
+  }, [productKey, router]);
 
-  if (!(decodedName in products)) {
-    return null; // 리다이렉트되기 전에 아무것도 렌더링하지 않음
+  if (!(productKey in products)) {
+    return null;
   }
-
-  const product = products[decodedName as keyof typeof products];
 
   const {
     image1,
@@ -30,7 +33,7 @@ const Detail = () => {
     type,
     category,
     description,
-    developers,
+    makers,
     image2,
   } = product;
 
@@ -61,10 +64,10 @@ const Detail = () => {
         </section>
         <p className="font-body3_r_14 mt-[1.9rem] text-w90">{description}</p>
         <section className="mb-[4.5rem] mt-[3.3rem] flex flex-col gap-[0.6rem]">
-          {Object.keys(developers).map((key) => {
-            const developerKey = key as keyof typeof developers;
+          {Object.keys(makers).map((key) => {
+            const developerKey = key as keyof typeof makers;
             return (
-              developers[developerKey].length > 0 && (
+              makers[developerKey].length > 0 && (
                 <div key={developerKey} className="flex gap-[1.4rem]">
                   <h4 className="font-caption1_b_13 text-w100">
                     {developerKey === "plan" && `🖊️ 기획자`}
@@ -75,9 +78,9 @@ const Detail = () => {
                     {developerKey === "server" && `💻 서버 개발자`}
                   </h4>
                   <ul className="font-caption2_r_13 flex items-center gap-[0.6rem] text-w80">
-                    {developers[developerKey].map((developer, index) => (
+                    {makers[developerKey].map((makers, index) => (
                       <li key={index} className="">
-                        {developer}
+                        {makers}
                       </li>
                     ))}
                   </ul>
