@@ -6,6 +6,7 @@ import { products } from "../../../../public/data/products";
 import { useEffect } from "react";
 import LinkButton from "@/components/LinkButton";
 import { pahtToProductKey } from "@/constants/productName";
+import Footer from "@/components/Footer";
 
 const Detail = () => {
   const router = useRouter();
@@ -130,6 +131,7 @@ const Detail = () => {
           </LinkButton>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

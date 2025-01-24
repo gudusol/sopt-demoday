@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 
 import { DM_Sans } from "next/font/google";
-import Footer from "@/components/Footer";
 import ScrollRestoration from "@/components/ScrollRestoration";
 
 const dmSans = DM_Sans({
@@ -30,7 +29,6 @@ export default function RootLayout({
       <body className={`${dmSans.variable} antialiased`}>
         <ScrollRestoration />
         {children}
-        <Footer />
       </body>
     </html>
   );
