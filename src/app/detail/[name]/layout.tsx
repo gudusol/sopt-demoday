@@ -7,7 +7,8 @@ interface DetailProps {
 export async function generateMetadata({
   params,
 }: DetailProps): Promise<Metadata> {
-  const decodedName = decodeURIComponent(params.name);
+  const { name } = await params;
+  const decodedName = decodeURIComponent(name);
   return {
     title: `${decodedName} : SOPT 데모데이`,
   };
