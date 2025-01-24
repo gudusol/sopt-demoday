@@ -3,6 +3,7 @@ import "../styles/globals.css";
 
 import { DM_Sans } from "next/font/google";
 import Footer from "@/components/Footer";
+import ScrollRestoration from "@/components/ScrollRestoration";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -22,8 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={dmSans.variable}>
-      <body className={`antialiased`}>
+    <html lang="ko">
+      <body className={`${dmSans.variable} antialiased`}>
+        <ScrollRestoration />
         {children}
         <Footer />
       </body>
