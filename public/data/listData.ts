@@ -96,7 +96,7 @@ export const listData = {
         "https://s3.ap-northeast-2.amazonaws.com/sopt-makers-internal//prod/image/project/e7b398cf-8c3f-41d8-bcf6-34ab6215e403-%EC%B5%9C%EC%A2%85%EB%A1%9C%EA%B3%A0.png",
       ProductName: "수현이랑",
       category: "소셜 네트워킹",
-      description: "완벽하게 엄빠몰래 가는 여행",
+      description: "완벽하게 엄빠 몰래 가는 여행",
     },
     {
       imageUrl:
