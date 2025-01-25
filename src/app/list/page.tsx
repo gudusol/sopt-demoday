@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import ProductList from "@/components/ProductList";
 import { listData } from "../../../public/data/listData";
 import { useEffect, useState } from "react";
+import Footer from "@/components/Footer";
 
 const shuffleArray = <T,>(array: T[]): T[] => {
   return [...array].sort(() => Math.random() - 0.5);
@@ -63,6 +64,7 @@ const List = () => {
           {menu === "makers" && <ProductList products={listData.makers} />}
         </section>
       </main>
+      <Footer />
     </>
   );
 };

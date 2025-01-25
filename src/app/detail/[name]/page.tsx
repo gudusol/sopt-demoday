@@ -6,6 +6,7 @@ import { products } from "../../../../public/data/products";
 import { useEffect } from "react";
 import LinkButton from "@/components/LinkButton";
 import { pahtToProductKey } from "@/constants/productName";
+import Footer from "@/components/Footer";
 
 const Detail = () => {
   const router = useRouter();
@@ -27,14 +28,14 @@ const Detail = () => {
   }
 
   const {
-    image1,
+    overview,
     logoImage,
     productName,
     type,
     category,
     description,
     makers,
-    image2,
+    detail,
   } = product;
 
   return (
@@ -43,8 +44,8 @@ const Detail = () => {
       <main className="w-full px-[2rem] pt-[7.6rem]">
         <Image
           className="mt-[1.3rem]"
-          src={image1}
-          alt={image1}
+          src={overview}
+          alt={`${productName}-${overview}`}
           width={390}
           height={221}
           style={{ width: "100%", height: "auto" }}
@@ -59,7 +60,7 @@ const Detail = () => {
           />
           <div>
             <h1 className="font-head1_b_28 text-w100">{productName}</h1>
-            <div className="flex gap-[0.8rem]">
+            <div className="flex items-center gap-[0.8rem]">
               <p className="font-body3_r_14 text-w50">
                 {type === "mobile" ? "앱" : "웹"} 서비스
               </p>
@@ -102,8 +103,8 @@ const Detail = () => {
           })}
         </section>
         <Image
-          src={image2}
-          alt={image2}
+          src={detail}
+          alt={`${productName}-${detail}`}
           width={390}
           height={221}
           style={{ width: "100%", height: "auto" }}
@@ -130,6 +131,7 @@ const Detail = () => {
           </LinkButton>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

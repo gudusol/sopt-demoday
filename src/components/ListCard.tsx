@@ -13,6 +13,7 @@ const ListCard = ({ imageUrl, name, category, description }: ListCardProps) => {
     <Link href={`/detail/${encodeURIComponent(name.replaceAll(" ", "_"))}`}>
       <article>
         <Image
+          className="rounded-[2px]"
           src={imageUrl}
           alt={`${name}-thumbnail`}
           width={190}
