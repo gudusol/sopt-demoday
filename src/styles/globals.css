@@ -92,7 +92,7 @@ body {
   width: 100%;
   min-width: var(--min-width);
   max-width: var(--max-width);
-  min-height: 150dvh;
+  min-height: 100dvh;
   margin: 0 auto;
 
   font-family: var(--font-pretendard), Arial, Helvetica, sans-serif;
