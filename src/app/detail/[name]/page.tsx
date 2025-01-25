@@ -75,7 +75,9 @@ const Detail = () => {
             </div>
           </div>
         </section>
-        <p className="font-body3_r_14 mt-[1.9rem] text-w90">{description}</p>
+        <p className="font-body3_r_14 mt-[1.9rem] whitespace-pre-line text-w90">
+          {description}
+        </p>
         <section className="mb-[4.5rem] mt-[3.3rem] flex flex-col gap-[0.6rem]">
           {Object.keys(makers).map((key) => {
             const developerKey = key as keyof typeof makers;
