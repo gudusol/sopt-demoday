@@ -11,6 +11,19 @@ export default function Home() {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [showSplash, setShowSplash] = useState(false);
 
+  const FadeInSection = ({ children }: { children: React.ReactNode }) => {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        {children}
+      </motion.div>
+    );
+  };
+
   useEffect(() => {
     const images = ["/images/splash.webp", "/images/splash_bg.webp"];
     let loadedCount = 0;
@@ -28,19 +41,6 @@ export default function Home() {
       };
     });
   }, []);
-
-  const FadeInSection = ({ children }: { children: React.ReactNode }) => {
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        {children}
-      </motion.div>
-    );
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
