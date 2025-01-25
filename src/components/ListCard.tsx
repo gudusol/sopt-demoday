@@ -10,7 +10,15 @@ interface ListCardProps {
 
 const ListCard = ({ imageUrl, name, category, description }: ListCardProps) => {
   return (
-    <Link href={`/detail/${encodeURIComponent(name.replaceAll(" ", "_"))}`}>
+    <Link
+      href={`/detail/${encodeURIComponent(name.replaceAll(" ", "_"))}`}
+      onClick={(e) => {
+        if (name === "SOPT makers") {
+          e.preventDefault();
+          window.open("https://makers.sopt.org", "_blank");
+        }
+      }}
+    >
       <article>
         <Image
           className="rounded-[2px]"
