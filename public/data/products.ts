@@ -264,7 +264,7 @@ export const products = {
     category: "생산성",
     description: "",
     makers: {
-      plan: [],
+      plan: ["황민규", "이지민"],
       design: ["황민규", "노하은"],
       android: [],
       ios: [],
